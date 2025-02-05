@@ -5,7 +5,7 @@ const Loader = ({ isLoading }) => {
     return (
         <div className={`loader-container-custom ${isLoading ? '' : 'hidden'}`}>
             <img 
-                src="/images/title.png" 
+                src="/images/title11.png" 
                 alt="Loading Logo" 
                 className="loader-logo" 
             />
