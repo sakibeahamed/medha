@@ -122,8 +122,8 @@ const Section2 = () => {
         `}
       </style>
       <section
-        id="section1"
-        style={{
+    id="about-section"
+    style={{
           position: "relative",
           backgroundImage: "url('/images/bgf.jpg')", // Updated background image
           backgroundSize: "cover",

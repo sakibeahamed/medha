@@ -30,9 +30,9 @@ export const Navbar = () => {
         {/* Desktop Menu */}
         <div className="menu">
           <a href="/">Home</a>
-          <a href="#">About</a>
-          <a href="#">Events</a>
-          <a href="#">Contact</a>
+          <a href="#about-section">About</a>
+          <a href="#event-section">Events</a>
+          <a href="#contact-section">Contact</a>
           <Link to="/register" className="reg">Register</Link> {/* Use Link for navigation */}
         </div>
 
@@ -46,9 +46,9 @@ export const Navbar = () => {
       {isMenuOpen && (
         <div className="dropdown-menu">
           <Link to="/" onClick={closeMenu}>Home</Link>
-          <a href="#" onClick={closeMenu}>About</a>
-          <a href="#" onClick={closeMenu}>Events</a>
-          <a href="#" onClick={closeMenu}>Contact</a>
+          <a href="#about-section" onClick={closeMenu}>About</a>
+          <a href="#event-section" onClick={closeMenu}>Events</a>
+          <a href="#contact-section" onClick={closeMenu}>Contact</a>
           <Link to="/register" onClick={closeMenu}>Register</Link> {/* Use Link for navigation in dropdown */}
         </div>
       )}

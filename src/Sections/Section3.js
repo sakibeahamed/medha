@@ -48,6 +48,7 @@ const Section3 = () => {
 
   return (
     <section
+    id="event-section"
       style={{
         backgroundImage: "url('/images/bgf.jpg')",
         color: "white",

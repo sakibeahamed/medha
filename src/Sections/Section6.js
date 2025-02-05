@@ -4,6 +4,7 @@ import React from "react";
 const Section1 = () => {
   return (
     <section
+    id="contact-section"
       style={{
         backgroundColor: "#000", // Fully black background
         color: "white",
