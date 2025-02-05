@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useRef } from "react";
 
 const Section2 = () => {
+  const videoRef = useRef(null);
+
+  // Ensure the video always plays and only allows muting/unmuting
+  const handleVideoClick = () => {
+    const video = videoRef.current;
+    if (video) {
+      video.muted = !video.muted; // Toggle mute/unmute
+    }
+  };
+
+  // Prevent pausing the video
+  const handleVideoPause = (e) => {
+    e.preventDefault();
+    const video = videoRef.current;
+    if (video) {
+      video.play(); // Force the video to continue playing
+    }
+  };
+
   return (
     <>
       {/* Add the @font-face definition in a <style> tag */}
@@ -122,8 +141,8 @@ const Section2 = () => {
         `}
       </style>
       <section
-    id="about-section"
-    style={{
+        id="about-section"
+        style={{
           position: "relative",
           backgroundImage: "url('/images/bgf.jpg')", // Updated background image
           backgroundSize: "cover",
@@ -148,9 +167,13 @@ const Section2 = () => {
           }}
         >
           <video
+            ref={videoRef}
             autoPlay
             muted
             loop
+            controls={false} // Disable default controls
+            onClick={handleVideoClick} // Allow muting/unmuting on click
+            onPause={handleVideoPause} // Prevent pausing
             style={{
               width: "100%",
               height: "100%",
